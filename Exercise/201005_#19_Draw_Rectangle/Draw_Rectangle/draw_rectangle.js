@@ -70,10 +70,10 @@ window.onload = function init() {
             t3 = vec2(t1[0], t2[1]);
             t4 = vec2(t2[0], t1[1]);
             
-            gl.bufferSubData(gl.ARRAY_BUFFER, 8 * index, flatten(t1));
+            gl.bufferSubData(gl.ARRAY_BUFFER, 8 * index, flatten(t3));
             gl.bufferSubData(gl.ARRAY_BUFFER, 8 * (index + 1), flatten(t2));
-            gl.bufferSubData(gl.ARRAY_BUFFER, 8 * (index + 2), flatten(t3));
-            gl.bufferSubData(gl.ARRAY_BUFFER, 8 * (index + 3), flatten(t4));
+            gl.bufferSubData(gl.ARRAY_BUFFER, 8 * (index + 2), flatten(t4));
+            gl.bufferSubData(gl.ARRAY_BUFFER, 8 * (index + 3), flatten(t1));
 
             gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
             var t = vec4(colors[cIndex]);
